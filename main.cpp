@@ -13,6 +13,9 @@ int main(int argc, const char** argv)
 		return -1;
 	}
 
+	Size textsize = getTextSize("Hello, OpenCV!", FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 1, 8);
+    Point org((window_width - textsize.width) / 2, (window_height - textsize.height) / 2);
+	putText(img, "Hello, OpenCV!", FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 1, 8);
 	namedWindow("MYWINDOW", CV_WINDOW_AUTOSIZE);
 	imshow("MYWINDOW", img);
 
